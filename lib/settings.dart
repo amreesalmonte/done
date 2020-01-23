@@ -11,8 +11,9 @@ class _Settings extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: mainColor,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: mainColor,
         iconTheme: IconThemeData(
             color: secondaryColor, //change your color here
