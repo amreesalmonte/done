@@ -21,11 +21,11 @@ class _Body extends State<Body> {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(left: 30),
-                child: Text("Hello.", style: TextStyle(color: header, fontSize: 50, fontWeight: FontWeight.w900)),
+                child: Text("Hello.", style: TextStyle(color: header, fontSize: 36)),
               ),
               Container(
                 margin: EdgeInsets.only(left: 30),
-                child: Text("Here's what needs to be done.", style: TextStyle(color: header, fontSize: 25, fontWeight: FontWeight.w900)),
+                child: Text("Here's what needs to be done.", style: TextStyle(color: header, fontSize: 18)),
               ),
           ],)
         )

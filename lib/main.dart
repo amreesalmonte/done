@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'done',
-      theme: ThemeData(fontFamily: 'Open Sans'),
+      theme: ThemeData(fontFamily: 'Open Sans'), // default font
       home: HomePage(),
     );
   }
@@ -22,6 +22,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _Home extends State<HomePage> {
+  bool mode = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,16 +33,15 @@ class _Home extends State<HomePage> {
         elevation: 0,
         actions: <Widget>[
           //redirects to settings
-          IconButton(
-            icon: Icon(Icons.settings, color: secondaryColor),
-            tooltip: 'Settings',
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Settings()),
-              );
-            },
-          )
+          Switch(
+              activeColor: Colors.black,
+              value: mode,
+              onChanged: (value) {
+                print("VALUE : $value");
+                setState(() {
+                  mode = value;
+                });
+              })
         ],
       ),
       // contains welcome message and items
