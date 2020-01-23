@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:done/theme.dart';
 import 'package:done/body.dart';
-import 'package:done/settings.dart';
 
 void main() => runApp(MyApp());
 
