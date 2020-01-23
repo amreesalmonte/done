@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:done/theme.dart';
+import 'package:done/makeList.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -27,6 +28,7 @@ class _Body extends State<Body> {
                 margin: EdgeInsets.only(left: 30),
                 child: Text("Here's what needs to be done.", style: TextStyle(color: header, fontSize: 18)),
               ),
+        SliverList(delegate: ToDoList(),)
           ],)
         )
       ],
