@@ -27,7 +27,9 @@ class _Home extends State<HomePage> {
     return Scaffold(
       backgroundColor: mainColor,
       // constant app bar on top with settings button
-      appBar: AppBar(
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(300.0),
+          child: AppBar(
         backgroundColor: mainColor,
         elevation: 0,
         actions: <Widget>[
@@ -42,7 +44,20 @@ class _Home extends State<HomePage> {
                 });
               })
         ],
-      ),
+        flexibleSpace: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 30),
+                child: Text("Hello.", style: TextStyle(color: header, fontSize: 36)),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 30),
+                child: Text("Here's what needs to be done.", style: TextStyle(color: header, fontSize: 18)),
+              ),
+          ],),
+      ),),
       // contains welcome message and items
       body: Body(),
       // button to add to do item
